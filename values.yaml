@@ -1,0 +1,10 @@
+frontend:
+  name: frontend
+  app: frontend
+  replicas: 4
+  image: jagadamma/3tier_frontend
+  containerPort: 80
+  backendUrl: "http://backend-service:4000"
+  serviceName: frontend-service
+  serviceType: LoadBalancer
+  servicePort: 80
